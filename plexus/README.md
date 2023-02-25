@@ -1,10 +1,10 @@
 # Plexus
-<samp> Welcome To Our App! Plexus is an app that makes taking
-care of your pets' needs easier moreand fun. 
-Services include providingaccess to information about the
-nearest pet shops, parks, salons,daycares and veterinary clinics as well
-as the option to contact the centersoffering the required services. Users
-can also use the chat feature tocommunicate with other pet owners.</samp>
+> <samp> Welcome To Our App! Plexus is an app that makes taking
+> care of your pets' needs easier moreand fun. 
+> Services include providingaccess to information about the
+> nearest pet shops, parks, salons,daycares and veterinary clinics as well
+> as the option to contact the centersoffering the required services. Users
+> can also use the chat feature to communicate with other pet owners.</samp>
 
 **_ONE STOP DESTINATION FOR ALL YOUR PETS NEEDS_**
 =
