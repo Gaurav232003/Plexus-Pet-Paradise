@@ -13,12 +13,13 @@ class _VetStoreState extends State<VetStore> {
   final userLat = TextEditingController();
   final userLong = TextEditingController();
   final userPhone = TextEditingController();
+  final userEmail = TextEditingController();
 
   late DatabaseReference dbRef;
   @override
   void initState() {
     super.initState();
-    dbRef = FirebaseDatabase.instance.ref().child('Vets');
+    dbRef = FirebaseDatabase.instance.ref().child('PetShop');
   }
 
   @override
@@ -57,6 +58,14 @@ class _VetStoreState extends State<VetStore> {
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               hintText: 'Vet phone',
+            ),
+          ),
+          TextField(
+            controller: userEmail,
+            keyboardType: TextInputType.text,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: 'email',
             ),
           ),
           ElevatedButton(

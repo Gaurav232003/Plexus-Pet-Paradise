@@ -41,6 +41,7 @@ class _ImageListState extends State<ImageList> {
         theme: ThemeData.dark(),
         debugShowCheckedModeBanner: false,
         home: Scaffold(
+          backgroundColor: Colors.blueGrey[800],
           floatingActionButton: FloatingActionButton(
             onPressed: () {
               Navigator.push(
@@ -54,6 +55,7 @@ class _ImageListState extends State<ImageList> {
             reverse: true,
             itemCount: imageUrls.length,
             itemBuilder: (context, index) {
+              print(imageUrls);
               return SingleChildScrollView(
                   child: Container(
                       padding: EdgeInsets.all(30.0),
@@ -85,45 +87,51 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        if (_imageFile != null) ...[
-          Image.file(_imageFile!),
-          Row(
-            children: [
-              Expanded(
-                child: ElevatedButton(
-                  onPressed: () {
-                    _uploadImage(_imageFile!);
-                    Navigator.pop(context);
-                  },
-                  child: Text('Upload'),
-                ),
+    return Scaffold(
+        backgroundColor: Colors.blueGrey[800],
+        body: Column(
+          children: [
+            if (_imageFile != null) ...[
+              Image.file(_imageFile!),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      _uploadImage(_imageFile!);
+                      Navigator.pop(context);
+                    },
+                    child: Text('Upload'),
+                    style:
+                        ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                  ),
+                ],
+              )
+            ] else ...[
+              SizedBox(height: 300),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Center(
+                    child: ElevatedButton(
+                      onPressed: () => _pickImage(ImageSource.camera),
+                      child: Text('Take Photo'),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black),
+                    ),
+                  ),
+                ],
               ),
             ],
-          )
-        ] else ...[
-          SizedBox(height: 8),
-          Row(
-            children: [
-              Expanded(
-                child: ElevatedButton(
-                  onPressed: () => _pickImage(ImageSource.camera),
-                  child: Text('Take Photo'),
-                ),
-              ),
-            ],
-          ),
-        ],
-        ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Back'),
-          style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
-        )
-      ],
-    );
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Back'),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+            )
+          ],
+        ));
   }
 
   Future<void> _uploadImage(File file) async {

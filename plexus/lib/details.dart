@@ -21,6 +21,7 @@ class _DetailsState extends State<Details> {
   var type = TextEditingController();
   var breed = TextEditingController();
   var gender = TextEditingController();
+  var phone = TextEditingController();
 
   @override
   void initState() {
@@ -102,6 +103,17 @@ class _DetailsState extends State<Details> {
               const SizedBox(
                 height: 20.0,
               ),
+              TextField(
+                controller: phone,
+                decoration: InputDecoration(
+                    border: InputBorder.none,
+                    labelText: 'Phone Number',
+                    hintText: 'Enter Phone'),
+                onChanged: (value) {},
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
               ElevatedButton(
                 onPressed: () async {
                   Map<String, String> userData = {
@@ -110,7 +122,8 @@ class _DetailsState extends State<Details> {
                     'dob': dob.text,
                     'gender': gender.text,
                     'type': type.text,
-                    'breed': breed.text
+                    'breed': breed.text,
+                    'phone': phone.text
                   };
 
                   if (name.text.toString() != "") {
@@ -119,6 +132,7 @@ class _DetailsState extends State<Details> {
                     data[2] = gender.text.toString();
                     data[3] = type.text.toString();
                     data[4] = breed.text.toString();
+                    data[5] = phone.text.toString();
                     SendDetailsToDataBase();
                   }
 
@@ -139,7 +153,6 @@ class _DetailsState extends State<Details> {
 
 SendDetailsToDataBase() async {
   String? email = FirebaseAuth.instance.currentUser!.email;
-  DatabaseReference ref = FirebaseDatabase.instance.ref('$email');
 
   FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final CollectionReference gd =
@@ -170,7 +183,7 @@ Future FillData() async {
 
 String? email = FirebaseAuth.instance.currentUser!.email;
 final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-Future<List<Map<String, dynamic>>> fetchData() async {
+Future<List<Map<String, dynamic>>> fetchData(var email) async {
   final QuerySnapshot<Map<String, dynamic>> querySnapshot =
       await _firestore.collection('$email').get();
   final List<QueryDocumentSnapshot<Map<String, dynamic>>> docs =
@@ -181,7 +194,8 @@ Future<List<Map<String, dynamic>>> fetchData() async {
 }
 
 getData() async {
-  final List<Map<String, dynamic>> data2 = await fetchData();
+  String? email = FirebaseAuth.instance.currentUser!.email;
+  final List<Map<String, dynamic>> data2 = await fetchData(email);
   // print(data2[0]['name']);
   if (data2.isNotEmpty) {
     data[0] = data2[0]['name'];

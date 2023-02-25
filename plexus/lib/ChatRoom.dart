@@ -1,5 +1,7 @@
 import 'dart:io';
-
+import 'package:petcare/details.dart';
+import 'chatroomid.dart';
+import 'data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -99,6 +101,25 @@ class ChatRoom extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     Map<String, dynamic> newuserMap = {
+      //       'name': data[0],
+      //       'email': email,
+      //       'uid': userMap['uid']
+      //     };
+
+      //     Navigator.of(context).push(
+      //       MaterialPageRoute(
+      //         builder: (_) => ChatRoom(
+      //           chatRoomId: chatRoomId,
+      //           userMap: userMap,
+      //         ),
+      //       ),
+      //     );
+      //   },
+      //   child: Icon(Icons.flip),
+      // ),
       appBar: AppBar(
         title: StreamBuilder<DocumentSnapshot>(
           stream:
@@ -109,10 +130,6 @@ class ChatRoom extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(userMap['name']),
-                    Text(
-                      snapshot.data!['status'],
-                      style: TextStyle(fontSize: 14),
-                    ),
                   ],
                 ),
               );

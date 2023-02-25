@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
 import 'package:petcare/profile.dart';
-import 'package:petcare/searchscreen.dart';
 import 'icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'details.dart';
 import 'data.dart';
 import 'check.dart';
@@ -18,6 +16,7 @@ import 'pages/petshops.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'ChatRoom.dart';
+import 'adoptiontemp.dart';
 
 import 'pages/meds.dart';
 
@@ -58,6 +57,7 @@ class _HomeState extends State<Home> {
       theme: ThemeData.dark(),
       darkTheme: ThemeData.dark(),
       home: Scaffold(
+        backgroundColor: Colors.blueGrey[800],
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(80.0),
           child: Container(
@@ -71,7 +71,7 @@ class _HomeState extends State<Home> {
               elevation: 0.0,
               actions: <Widget>[
                 Container(
-                    padding: EdgeInsets.only(top: 5.0),
+                    padding: EdgeInsets.only(top: 5.0, right: 5.0),
                     child: Align(
                         alignment: Alignment.topRight,
                         child: GestureDetector(
@@ -79,21 +79,25 @@ class _HomeState extends State<Home> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Profile()),
+                                    builder: (context) => HomePageProfile()),
                               );
                             },
-                            child: CircleAvatar()))),
+                            child: CircleAvatar(
+                              radius: 30.0,
+                              backgroundImage: AssetImage('assets/Dog$rng.jpg'),
+                            )))),
               ],
             ),
           ),
         ),
         drawer: Drawer(
+          backgroundColor: Colors.blueGrey[800],
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
               const DrawerHeader(
                 decoration: BoxDecoration(),
-                child: Text('Hey Eddie'),
+                child: Text('Hey There'),
               ),
               ListTile(
                 title: const Text('Sign Out!'),
@@ -109,18 +113,6 @@ class _HomeState extends State<Home> {
         ),
         body: Column(
           children: [
-            // Expanded(
-            //   child: FirebaseAnimatedList(
-            //       query: ref,
-            //       padding: EdgeInsets.all(8.0),
-            //       reverse: false,
-            //       itemBuilder: (BuildContext context_, DataSnapshot snapshot,
-            //           Animation<double> animation, int x) {
-            //         Map mmm = snapshot.value as Map;
-            //         mmm['key'] = snapshot.key;
-            //         return FillDetails(mmm: mmm);
-            //       }),
-            // ),
             Container(
               padding: EdgeInsets.only(left: 45.0, right: 45.0),
               child: Column(
@@ -224,19 +216,19 @@ class _HomeState extends State<Home> {
                           avatar: Icon(Icons.book, size: 80.0),
                         ),
                       ),
-                      GestureDetector(
-                        onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
-                        ),
-                        child: IconLayout(
-                          height: height,
-                          txt: "Chat",
-                          avatar: Icon(Icons.chat, size: 80.0),
-                        ),
-                      ),
                     ],
                   ),
+                  // GestureDetector(
+                  //   onTap: () => Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(builder: (context) => AdoptionTemp()),
+                  //   ),
+                  //   child: IconLayout(
+                  //     height: height,
+                  //     txt: "Adoption",
+                  //     avatar: Icon(Icons.pets, size: 80.0),
+                  //   ),
+                  // ),
                 ],
               ),
             ),
@@ -247,15 +239,6 @@ class _HomeState extends State<Home> {
   }
 }
 
-Map<String, dynamic> getUserMap() {
-  Map<String, dynamic> userMap = {
-    "name": data[0],
-    "email": email,
-  };
-
-  return userMap;
-}
-
 getUserData() async {
   String? email = FirebaseAuth.instance.currentUser!.email;
   String useEmail = email.toString() != null ? email.toString() : "notfound";
@@ -263,13 +246,6 @@ getUserData() async {
   DatabaseReference dbRef = FirebaseDatabase.instance.ref('UserData');
 
   Query q = dbRef.child('UserData').orderByChild('email').equalTo('$email');
-  // Query query = dbRef.orderByChild('email').equalTo(useEmail);
-  // DataSnapshot event = await query.get();
-  // // DatabaseEvent event = await dbRef.once();
-  // print(event.toString());
-  // Map mmm = event.value as Map;
-  // mmm['key'] = event.key;
-  // print(mmm);
 
   DataSnapshot snapshot = await q.get();
 }

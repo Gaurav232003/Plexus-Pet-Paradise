@@ -25,6 +25,34 @@ class blankpage extends StatelessWidget {
       }
     });
 
-    return Container();
+    return Container(
+      padding: EdgeInsets.only(top: 350.0),
+      color: Colors.white,
+      child: Column(
+        children: [
+          Text(
+            'Loading',
+            style: TextStyle(
+                decoration: TextDecoration.none,
+                color: Colors.black,
+                fontWeight: FontWeight.w700),
+          ),
+          SizedBox(
+            height: 20.0,
+          ),
+          CircularProgressIndicatorApp(),
+        ],
+      ),
+    );
+  }
+}
+
+class CircularProgressIndicatorApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return CircularProgressIndicator(
+      backgroundColor: Colors.black,
+      strokeWidth: 8,
+    );
   }
 }
