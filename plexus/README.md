@@ -11,20 +11,20 @@
 
 ## FEATURES
 
-### LOCATING THE NEAREST PET SERVICES
-Allows users to locate the nearest and most convinient
-pet services such as vets, pet shops, salons etc, also makes
-it easier for the user to contact these pet services.
+>### LOCATING THE NEAREST PET SERVICES
+>>Allows users to locate the nearest and most convinient
+>>pet services such as vets, pet shops, salons etc, also makes
+>>it easier for the user to contact these pet services.
 
-### STORES THE PET'S HISTORY
-Stores the entire pet history including medical and
-grooming history of the pets for easy access and
-organization in the future.
+>### STORES THE PET'S HISTORY
+>>Stores the entire pet history including medical and
+>>grooming history of the pets for easy access and
+>>organization in the future.
 
-### CHATTING FEATURE FOR COMMUNICATION
-Provides a chatting platfrom for users to chat with other
-pet owners and users of the app, chats can happen
-individually or in groups.
+>### CHATTING FEATURE FOR COMMUNICATION
+>>Provides a chatting platfrom for users to chat with other
+>>pet owners and users of the app, chats can happen
+>>individually or in groups.
 
 ## THE PROBLEMS WE AIM TO SOLVE
 
