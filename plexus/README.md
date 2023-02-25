@@ -6,7 +6,9 @@ nearest pet shops, parks, salons,daycares and veterinary clinics as well
 as the option to contact the centersoffering the required services. Users
 can also use the chat feature tocommunicate with other pet owners.
 
-**_ONE STOP DESTINATION FOR ALLYOUR PETS NEEDS_**
+##**_ONE STOP DESTINATION FOR ALL YOUR PETS NEEDS_**
+=
+
 
 ## FEATURES
 
