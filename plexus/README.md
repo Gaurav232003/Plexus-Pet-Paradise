@@ -25,3 +25,17 @@ Provides a chatting platfrom for users to chat with other
 pet owners and users of the app, chats can happen
 individually or in groups.
 
+# FUTURE GOALS
+ Daily To-do check list including daily reminders, alarms
+and notes, also options to book appointments for your
+pet directly from the app.
+Scan the breed option to scan your
+pet and check out all the fun
+information about its breed
+Create a community of pets, hosts events at pet parks and
+daycares to increase the popularity of the app. Events such as
+pet shows, pet runs and carnivals etc for the pet owners and
+their pets.
+Pet adoption! To arrange adoption options for users who are
+looking for adopting pets with people who want to find a
+good home for the animals
