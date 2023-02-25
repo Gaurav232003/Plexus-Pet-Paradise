@@ -25,8 +25,23 @@ Provides a chatting platfrom for users to chat with other
 pet owners and users of the app, chats can happen
 individually or in groups.
 
-# FUTURE GOALS
- Daily To-do check list including daily reminders, alarms
+## THE PROBLEMS WE AIM TO SOLVE
+
+### LACK OF AWARENESS
+Pet owners, such as the ones in our country India, tend to not be aware
+of services that exist for pets.
+
+### INCONVENIENCE OF TRACK OF RECORDS
+When it comes to maintaining hard copies of the medical history of pets,
+information may be a pain to hold on to.
+
+### INABILITY TO ACCESS SERVICES
+It is usually not easy to identify and locate good centers offering services
+for pets right away.
+
+
+## FUTURE GOALS
+Daily To-do check list including daily reminders, alarms
 and notes, also options to book appointments for your
 pet directly from the app.
 Scan the breed option to scan your
@@ -39,3 +54,5 @@ their pets.
 Pet adoption! To arrange adoption options for users who are
 looking for adopting pets with people who want to find a
 good home for the animals
+
+
