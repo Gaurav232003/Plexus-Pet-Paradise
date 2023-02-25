@@ -28,15 +28,15 @@
 
 ## THE PROBLEMS WE AIM TO SOLVE
 
-### LACK OF AWARENESS
+**LACK OF AWARENESS**
 >Pet owners, such as the ones in our country India, tend to not be aware
 >of services that exist for pets.
 
-### INCONVENIENCE OF TRACK OF RECORDS
+**INCONVENIENCE OF TRACK OF RECORDS**
 >When it comes to maintaining hard copies of the medical history of pets,
 >information may be a pain to hold on to.
 
-### INABILITY TO ACCESS SERVICES
+**INABILITY TO ACCESS SERVICES**
 >It is usually not easy to identify and locate good centers offering services
 >for pets right away.
 
