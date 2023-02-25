@@ -39,6 +39,8 @@ information may be a pain to hold on to.
 It is usually not easy to identify and locate good centers offering services
 for pets right away.
 
+## Challenges we ran into
+The first and foremost challenge we faced was developing the database and choosing which database to use for the various pet services, not only developing and updating the database but also integrating it with the app so that we could access its data and display it to the user accurately. It was a challenge to make sure the database was correct and was providing data precisely.The second challenge was developing the front-end as well as the UI for the app. We knew we had to make an easy to work with framework for the user to use therefore we had to work hard on the front end part of it as much as we did the backend
 
 ## FUTURE GOALS
 Daily To-do check list including daily reminders, alarms
