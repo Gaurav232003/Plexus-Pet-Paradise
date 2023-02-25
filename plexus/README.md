@@ -6,22 +6,22 @@
 > as the option to contact the centersoffering the required services. Users
 > can also use the chat feature to communicate with other pet owners.</samp>
 
-**_ONE STOP DESTINATION FOR ALL YOUR PETS NEEDS_**
+<ins> **_ONE STOP DESTINATION FOR ALL YOUR PETS NEEDS_** </ins>
 =
 
 ## FEATURES
 
->**LOCATING THE NEAREST PET SERVICES**
+**LOCATING THE NEAREST PET SERVICES**
 >>Allows users to locate the nearest and most convinient
 >>pet services such as vets, pet shops, salons etc, also makes
 >>it easier for the user to contact these pet services.
 
->**STORES THE PET'S HISTORY**
+**STORES THE PET'S HISTORY**
 >>Stores the entire pet history including medical and
 >>grooming history of the pets for easy access and
 >>organization in the future.
 
->**CHATTING FEATURE FOR COMMUNICATION**
+**CHATTING FEATURE FOR COMMUNICATION**
 >>Provides a chatting platfrom for users to chat with other
 >>pet owners and users of the app, chats can happen
 >>individually or in groups.
