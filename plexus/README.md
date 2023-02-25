@@ -6,7 +6,7 @@
 > as the option to contact the centersoffering the required services. Users
 > can also use the chat feature to communicate with other pet owners.</samp>
 
-<ins> **_ONE STOP DESTINATION FOR ALL YOUR PETS NEEDS_** </ins>
+<ins> **_ONE STOP DESTINATION FOR ALL YOUR PET'S NEEDS_** </ins>
 =
 
 ## FEATURES
